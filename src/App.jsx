@@ -36,6 +36,7 @@ function App() {
                       <source src={elon} type="video/mp4" />
                       Your browser does not support the video tag.
                   </video>
+
                   <h2>Cool Fish Photo</h2>
                   <img src={fish} alt="React Logo" />
                   <p>This is a refrence to Hajime No Ipo because he smells like fish and is bullied for it in the Animé</p>

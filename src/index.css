@@ -1,144 +1,190 @@
-.title {
-  color: green;
-}
-#estein {
-  width: 500px;
-  height: 100px;
-}
-.container {
-  text-align: center;
-}
-video {
-  width: 760px;
-  height: 100px;
-}
 
 html,
 body {
-  background: #1ba11a url(/public/images/grub.png) top left repeat;
-  font-family:
-          Comic Sans,
-          Comic Sans MS,
-          cursive;
   margin: 0;
   padding: 0;
+  background:
+          url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzMwa2JkdG0wOWVjdzFtNDgwanQxZHV4Y2t3ZXZkNXVod3FvZGFuYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iwiQ0f823REBjWZJFG/giphy.gif') top repeat-x,
+          #001100;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  color: white;
+  cursor: crosshair;
 }
-ul {
-  list-style-type: none;
-  margin: 0;
+
+body {
+  overflow-x: hidden;
 }
-ul li {
-  display: inline;
+
+* {
+  box-sizing: border-box;
 }
-img {
-  border: none;
-  width: 400px;
-  height: 400px;
-}
-#walter-container {
+
+.walter-container {
+  width: 900px;
   margin: 0 auto;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  border: 8px ridge lime;
   padding: 20px;
-  text-align: center;
-  width: 965px;
 }
-#walter-container h1 {
-  color: #fff;
-  font-family: times, helvetic, sans-serif;
-  font-size: 112px;
-  margin: 0;
-  padding-top: 12px;
+
+.title {
+  font-size: 92px;
+  color: yellow;
+  text-shadow:
+          4px 4px red,
+          -4px -4px blue;
+  animation: shake 0.2s infinite;
 }
-#walter-container h3 {
+
+marquee {
+  background: black;
+  color: cyan;
+  padding: 10px;
+  border: 3px dashed hotpink;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.under-construction {
+  background: orange;
+  color: black;
+  padding: 12px;
+  border: 5px dashed red;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.counter-box {
+  background: black;
+  border: 4px inset gray;
+  width: 320px;
+  margin: 20px auto;
+  padding: 10px;
+  color: lime;
+  font-size: 28px;
+}
+
+.content-box,
+.blink-box,
+.logan-box {
+  background: #111;
+  border: 6px groove magenta;
+  margin: 30px auto;
+  padding: 20px;
+  box-shadow: 0 0 25px red;
+}
+
+.rotate-left {
+  transform: rotate(-1deg);
+}
+
+.rotate-right {
+  transform: rotate(1deg);
+}
+
+img {
+  width: 350px;
+  max-width: 100%;
+  border: 6px ridge cyan;
+  margin: 15px;
+}
+
+video {
+  width: 700px;
+  max-width: 100%;
+  border: 6px ridge yellow;
+  background: black;
+}
+
+h2,
+h3 {
+  color: hotpink;
+  text-shadow: 2px 2px black;
   font-size: 40px;
-  font-weight: normal;
-  margin: 0;
 }
-#walter-container p {
-  font-weight: bold;
-  margin: 1em 50px;
-  line-height: 1.2em;
-  text-align: left;
+
+p,
+a {
+  font-size: 26px;
 }
-#walter-container p.middle {
-  text-align: center;
-}
-#walter-container ul#second_row {
-  margin: 42px 0;
-}
-#walter-container ul#second_row li {
-  margin: 0px 18px;
-}
-#walter-container ul#second_row li img {
-  vertical-align: top;
-}
-#walter-container ul#fourth_row li {
-  margin: 40px 95px;
-}
-#walter-container #donate-container {
-  margin: 40px 0;
-}
-#walter-container #donations-so-far {
-  background: #000;
-  width: 840px;
-  height: 185px;
-  margin: 0 auto;
+
+a {
+  color: cyan;
+  background: blue;
   padding: 8px;
+  display: inline-block;
+  margin: 10px;
 }
-#donations-so-far p {
-  margin: 12px 0;
+
+.gif-row,
+.footer-gifs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
-#donations-so-far #donation-counter {
-  margin-top: 32px;
+
+.gif-row img,
+.footer-gifs img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
 }
-#donations-so-far #donation-counter li {
-  background: #fff;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 12px 6px;
-  vertical-align: middle;
-  text-align: center;
-  height: 50px;
+
+.bad-link-box {
+  animation: blink 0.6s infinite;
 }
-#donations-so-far #donation-counter li.push {
-  margin-left: 18px;
+
+.blink-box {
+  animation: rainbow 1s infinite;
 }
-div.ribbons {
-  background: url(./img/bow_left.png) no-repeat 155px 70px;
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-div.ribbons p {
-  background: url(./img/bow_right.png) no-repeat 655px 70px;
-  padding: 22px;
+
+@keyframes shake {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(2px, -2px);
+  }
+  50% {
+    transform: translate(-2px, 2px);
+  }
+  75% {
+    transform: translate(2px, 2px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
 }
-.white {
-  color: #fff;
-}
-.yellow {
-  color: #fff54f;
-}
-.dark-yellow {
-  color: #ffe107;
-}
-.small-copy {
-  font-size: 21px;
-}
-.medium-copy {
-  font-size: 25px;
-}
-.large-copy {
-  font-size: 42px;
-}
-.legal {
-  text-align: center;
-  padding-bottom: 20px;
-}
-.legal a {
-  color: #fff;
-}
-.legal a + a {
-  margin-left: 40px;
-}
-.copyright {
-  text-align: center;
-  font-size: 12px;
-  padding-bottom: 20px;
+
+@keyframes rainbow {
+  0% {
+    background: darkred;
+  }
+  25% {
+    background: darkblue;
+  }
+  50% {
+    background: darkgreen;
+  }
+  75% {
+    background: purple;
+  }
+  100% {
+    background: darkred;
+  }
 }
